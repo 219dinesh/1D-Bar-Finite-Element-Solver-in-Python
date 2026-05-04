@@ -61,7 +61,10 @@ Before we can solve $\mathbf{K} \mathbf{U} = \mathbf{F}$, we have a mathematical
 
 We partition the matrices into **Free** ($f$) DOFs (nodes that can move) and **Prescribed/Fixed** ($p$) DOFs (nodes bolted to the wall):
 
-$$\begin{bmatrix} \mathbf{K}_{ff} & \mathbf{K}_{fp} \\ \mathbf{K}_{pf} & \mathbf{K}_{pp} \end{bmatrix} \begin{bmatrix} \mathbf{U}_f \\ \mathbf{U}_p \end{bmatrix} = \begin{bmatrix} \mathbf{F}_f \\ \mathbf{F}_p \end{bmatrix}$$
+$$\begin{bmatrix} \mathbf{K}_{ff} & \mathbf{K}_{fp} \\ 
+\mathbf{K}_{pf} & \mathbf{K}_{pp} \end{bmatrix} \begin{bmatrix} \mathbf{U}_f \\ 
+\mathbf{U}_p \end{bmatrix} = \begin{bmatrix} \mathbf{F}_f \\ 
+\mathbf{F}_p \end{bmatrix}$$
 
 Since our wall is completely fixed, we know the displacement at the wall is zero ($\mathbf{U}_p = \mathbf{0}$). This greatly simplifies the top row of our partitioned equation:
 
@@ -80,6 +83,7 @@ Finally, we want to know how much force the wall is pushing back with (the react
 $$\mathbf{F}_p = \mathbf{K}_{pf} \mathbf{U}_f + \mathbf{K}_{pp} \mathbf{U}_p$$
 
 Because $\mathbf{U}_p = 0$, the equation simplifies to:
+
 $$\mathbf{F}_p = \mathbf{K}_{pf} \mathbf{U}_f$$
 
 This exactly matches the step in the code where we take the first row of the global matrix (`K_global[fixed_dof, :]`) and multiply it by the newly solved displacement vector.
