@@ -41,7 +41,9 @@ A full bar is made of multiple elements connected end-to-end. To find the behavi
 
 Because elements share nodes, their stiffnesses add together at those shared points. For a 2-element bar (3 nodes total), the assembly looks like this:
 
-$$\mathbf{K}_{global} = \begin{bmatrix} k_1 & -k_1 & 0 \\ -k_1 & k_1 + k_2 & -k_2 \\ 0 & -k_2 & k_2 \end{bmatrix}$$
+$$\mathbf{K}_{global} = \begin{bmatrix} k_1 & -k_1 & 0 \\ 
+-k_1 & k_1 + k_2 & -k_2 \\ 
+0 & -k_2 & k_2 \end{bmatrix}$$
 
 The middle term ($k_1 + k_2$) represents Node 1, which is shared by Element 1 and Element 2. Physically, it means both elements are resisting movement at that joint.
 
