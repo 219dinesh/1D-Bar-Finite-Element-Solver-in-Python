@@ -29,8 +29,11 @@ A 1D element has two nodes (left and right). If we apply a force to pull the rig
 $$\mathbf{k}^e = \frac{EA}{L_e} \begin{bmatrix} 1 & -1 \\ 
                                                -1 & 1 \end{bmatrix}$$
 
-This matrix relates the nodal forces ($f_1, f_2$) to the nodal displacements ($u_1, u_2$) for that single element:
-$$\begin{bmatrix} f_1 \\ f_2 \end{bmatrix} = \frac{EA}{L_e} \begin{bmatrix} 1 & -1 \\ -1 & 1 \end{bmatrix} \begin{bmatrix} u_1 \\ u_2 \end{bmatrix}$$
+This matrix relates the nodal forces ($f_1$, $f_2$) to the nodal displacements ($u_1$, $u_2$) for that single element:
+$$\begin{bmatrix} f_1 \\ 
+                  f_2 \end{bmatrix} = \frac{EA}{L_e} \begin{bmatrix} 1 & -1 \\
+                                                                    -1 & 1 \end{bmatrix} \begin{bmatrix} u_1 \\ 
+                                                                                                         u_2 \end{bmatrix}$$
 
 ### 2. Global Assembly ($\mathbf{K}_{global}$)
 A full bar is made of multiple elements connected end-to-end. To find the behavior of the whole system, we assemble the local matrices into a giant **Global Stiffness Matrix** ($\mathbf{K}$). 
