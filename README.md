@@ -20,6 +20,7 @@ pip install numpy
 ```
 ## How It Works
 The script is divided into six distinct, heavily commented sections that mirror standard FEM theory:
+
 **1. Define Problem Parameters:** Set the physical properties (Length, Area, Young's Modulus) and the number of elements to mesh.
 
 **2. Initialize Global Matrices:** Pre-allocate memory for the Global Stiffness Matrix [K] and Force vector {F}.
