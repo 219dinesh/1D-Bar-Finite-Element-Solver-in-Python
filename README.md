@@ -30,7 +30,8 @@ $$\mathbf{k}^e = \frac{EA}{L_e} \begin{bmatrix} 1 & -1 \\
                                                -1 & 1 \end{bmatrix}$$
 
 This matrix relates the nodal forces ($f_1$, $f_2$) to the nodal displacements ($u_1$, $u_2$) for that single element:
-$$\begin{bmatrix} f_1 \\ 
+
+$$ \begin{bmatrix} f_1 \\ 
                   f_2 \end{bmatrix} = \frac{EA}{L_e} \begin{bmatrix} 1 & -1 \\
                                                                     -1 & 1 \end{bmatrix} \begin{bmatrix} u_1 \\ 
                                                                                                          u_2 \end{bmatrix}$$
